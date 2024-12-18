@@ -28,8 +28,8 @@ Ensure you have the following installed on your system:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/echovick/todo-app-api.git
-cd todo-app-api
+git clone https://github.com/echovick/teksyo-todo-api.git
+cd teksyo-todo-api
 ```
 
 ### 2. Install Dependencies
@@ -42,17 +42,25 @@ npm install
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file in the project root and configure the following variables:
+Before running the application, make sure to create a `.config.env` file in the root directory by duplicating the `.config.env.example` file and renaming it to `.config.env`. Then, fill in the required values for the environment variables:
 
 ```env
+APP_NAME=Express
+NODE_ENV=development
 PORT=3000
-MONGO_URI=mongodb://localhost:27017/todoapp
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=teksyotodo
+
+DATABASE_LOCAL=mongodb://localhost:27017/todoapp # change helloworld to your desired local DB name
+
+DATABASE_CONNECION_STRING=
+DATABASE_NAME=
+DATABASE_USERNAME=
+DATABASE_PASSWORD=
 ```
 
 ### 4. Start MongoDB
 
-Ensure MongoDB is running locally or configure the `MONGO_URI` in your `.env` file to point to a cloud MongoDB instance.
+Ensure MongoDB is running locally or configure the `DATABASE_CONNECION_STRING` in your `.config.env` file to point to a cloud MongoDB instance.
 
 ### 5. Start the Server
 
