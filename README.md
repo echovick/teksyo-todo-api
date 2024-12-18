@@ -254,28 +254,23 @@ The server will start on `http://localhost:3000` by default.
 
 ```
 .
+├── controllers
+│   ├── auth.controller.js     # Authentication controllers
+│   ├── task.controller.js     # Tasks / Todo controller
+├── middlewares
+│   ├── auth.js   # Middleware for user authentication
 ├── models
-│   ├── user.model.js     # User schema and model
+│   ├── category.model.js     # category schema and model
 │   ├── task.model.js     # Task schema and model
+│   ├── user.model.js     # User schema and model
 ├── routes
-│   ├── auth.routes.js    # Authentication routes
-│   ├── todos.routes.js   # Task management routes
-├── middleware
-│   ├── authenticate.js   # Middleware for user authentication
+│   ├── api.routes.js    # All application routes
 ├── utils
 │   ├── apiResponder.js   # Utility for sending consistent API responses
+│   ├── connectToDatabase.js   # Utility connecting to the database of your choice
+│   ├── responseStatus.js   # Utility for keeping status codes
 ├── app.js                # Main application file
 ├── package.json          # Dependencies and scripts
-```
-
----
-
-## Running Tests
-
-To run tests, use the following command:
-
-```bash
-npm test
 ```
 
 ---
