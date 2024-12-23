@@ -66,5 +66,3 @@ async function fetchUsers() {
 
 5. **Efficiency**:
    - Only processes the filtered users instead of keeping the entire dataset in memory.
-
----
