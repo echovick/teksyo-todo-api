@@ -68,9 +68,3 @@ async function fetchUsers() {
    - Only processes the filtered users instead of keeping the entire dataset in memory.
 
 ---
-
-## **Submission Summary**
-
-- **Issues Identified**: 
-  - Misuse of `fetch` and `.json()`, lack of error handling, and returning unfiltered data.
-- **Revised Code**: Provided with detailed explanations for changes and optimizations.
