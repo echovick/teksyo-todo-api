@@ -3,9 +3,8 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const apiRoutes = require("./routes/api.route.js");
 const connectToDatabase = require("./utils/connectToDatabase.js");
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
+var cors = require("cors");
+const bodyParser = require("body-parser");
 
 // Connect to the database
 connectToDatabase();
@@ -21,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(helmet()); // Set security http headers
 app.use(mongoSanitize()); // Data sanitization against NoSQL query injection
 app.use(bodyParser.json());
+app.use(cors());
 
 // Replace with your environment-specific secret key
 const JWT_SECRET = process.env.JWT_SECRET;
