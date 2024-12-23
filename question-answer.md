@@ -1,4 +1,4 @@
-# Debugging and Optimization
+# Question 2: Debugging and Optimization
 
 ## **Issues in the Code**
 
